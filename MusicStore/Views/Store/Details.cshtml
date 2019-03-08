@@ -1,0 +1,24 @@
+﻿@model MusicStore.Models.Album
+@{
+    ViewData["Title"] = "Album details";
+}
+
+<h2>Album Details</h2>
+<p>
+    @Model.Title
+</p>
+
+<img src="~/content/@Model.AlbumArtUrl" />
+<p>
+    Genre: @Model.Genre.Name
+</p>
+<p>
+    Artist: @Model.Artist.Name
+</p>
+<p>
+    Price: @Model.Price
+</p>
+
+<a  asp-route-id="@Model.AlbumID">
+    Add to cart
+</a>
